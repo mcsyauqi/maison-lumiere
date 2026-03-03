@@ -24,416 +24,295 @@ export default function Home() {
   return (
     <main>
       {/* ================================================================
-          HERO
+          HERO - Full-bleed editorial hero with serif overlay
           ================================================================ */}
       <section className="relative h-screen w-full overflow-hidden">
-        {/* Background Image */}
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80"
-            alt="Luxury terrace with morning light"
+            alt="Grand luxury residence facade bathed in golden hour light"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/10 to-black/60" />
         </div>
 
-        {/* Navigation Bar */}
-        <nav className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-8 py-6 md:px-16 lg:px-20 animate-fade-down">
-          <div className="font-[family-name:var(--font-montserrat)] text-[11px] font-light tracking-[0.3em] text-white/80 uppercase">
-            Est. 2024
-          </div>
-          <div className="hidden md:flex items-center gap-10">
-            {["Residences", "Lifestyle", "Materials", "Contact"].map(
-              (item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="font-[family-name:var(--font-montserrat)] text-[11px] font-light tracking-[0.25em] text-white/80 uppercase hover:text-white transition-colors duration-300"
-                >
-                  {item}
-                </a>
-              )
-            )}
-          </div>
-          <div className="font-[family-name:var(--font-montserrat)] text-[11px] font-light tracking-[0.3em] text-white/80 uppercase">
-            Menteng, Jakarta
+        {/* Navigation */}
+        <nav className="absolute top-0 left-0 right-0 z-20 animate-fade-down">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between py-8">
+            <span className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.35em] text-white/70 uppercase">
+              Est. 2024
+            </span>
+            <div className="hidden md:flex items-center gap-10">
+              {["Residences", "Philosophy", "Amenities", "Gallery", "Contact"].map(
+                (item) => (
+                  <a
+                    key={item}
+                    href={`#${item.toLowerCase()}`}
+                    className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.3em] text-white/70 uppercase hover:text-white transition-colors duration-500"
+                  >
+                    {item}
+                  </a>
+                )
+              )}
+            </div>
+            <span className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.35em] text-white/70 uppercase">
+              Menteng, Jakarta
+            </span>
           </div>
         </nav>
 
-        {/* Main Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+        {/* Hero Content */}
+        <div className="relative z-10 flex flex-col items-center justify-end h-full pb-32 md:pb-40 text-center px-6">
           <div className="animate-fade-up">
-            <h1 className="font-[family-name:var(--font-cormorant)] text-[clamp(3rem,10vw,7rem)] font-light leading-[0.95] text-white tracking-wide">
+            <h1 className="font-[family-name:var(--font-cormorant)] text-[clamp(3.5rem,12vw,9rem)] font-light leading-[0.9] text-white tracking-[0.02em]">
               Maison
               <br />
-              <span className="italic">Lumi&egrave;re</span>
+              <span className="italic font-normal">Lumi&egrave;re</span>
             </h1>
           </div>
 
-          <div className="mt-8 animate-fade-up-delayed">
-            <div className="w-12 h-px bg-white/50 mx-auto mb-5" />
-            <p className="font-[family-name:var(--font-montserrat)] text-[11px] font-light tracking-[0.35em] text-white/80 uppercase">
-              The Art of Living Well
+          <div className="mt-10 animate-fade-up-delayed">
+            <div className="w-20 h-px bg-[#8B6F47]/80 mx-auto mb-6" />
+            <p className="font-[family-name:var(--font-cormorant)] text-[clamp(1rem,2vw,1.35rem)] font-light tracking-[0.15em] text-white/80 italic">
+              Where Architecture Meets the Art of Living
             </p>
           </div>
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center scroll-indicator animate-fade-up-delayed-long">
-          <span className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.3em] text-white/60 uppercase mb-4">
-            Discover
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center scroll-indicator animate-fade-up-delayed-long">
+          <span className="font-[family-name:var(--font-montserrat)] text-[9px] font-light tracking-[0.4em] text-white/50 uppercase mb-3">
+            Scroll
           </span>
-          <div className="w-px h-10 bg-white/40" />
+          <div className="w-px h-8 bg-white/30" />
         </div>
       </section>
 
       {/* ================================================================
-          PHILOSOPHY - Magazine Spread
+          EDITORIAL INTRODUCTION - Magazine-style text with drop cap
           ================================================================ */}
-      <section className="py-20 lg:py-28 bg-cream">
+      <section className="py-20 lg:py-32 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          {/* Section label */}
-          <div className="mb-16">
-            <span className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.4em] text-taupe uppercase">
-              Our Philosophy
+          {/* Section eyebrow */}
+          <div className="text-center mb-6">
+            <span className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.5em] text-[#8B6F47] uppercase">
+              An Introduction
             </span>
           </div>
 
-          {/* Magazine spread layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
-            {/* Large image */}
-            <div className="lg:col-span-7 relative aspect-[4/5] lg:aspect-[3/4] overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
-                alt="Architectural window with natural light flooding a minimalist interior"
-                className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-700"
-              />
+          {/* Thin bronze rule */}
+          <div className="w-16 h-px bg-[#8B6F47] mx-auto mb-16" />
+
+          {/* Two-column editorial layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+            {/* Left column - Main editorial text */}
+            <div className="lg:col-span-7">
+              <p className="font-[family-name:var(--font-lora)] text-[16px] lg:text-[17px] leading-[2] text-[#2C2C2C]/75 first-letter:text-[4rem] first-letter:font-[family-name:var(--font-cormorant)] first-letter:font-light first-letter:text-[#1A1A1A] first-letter:leading-[0.8] first-letter:float-left first-letter:mr-3 first-letter:mt-1">
+                There exists a particular quality of light in Menteng &mdash; soft,
+                filtered through decades-old canopies, landing on surfaces with the
+                quietness of a held breath. It was this light that inspired Maison
+                Lumi&egrave;re: not merely a residence, but a meditation on how
+                space, material, and time can converge to create something that
+                transcends architecture.
+              </p>
+              <p className="font-[family-name:var(--font-lora)] text-[16px] lg:text-[17px] leading-[2] text-[#2C2C2C]/75 mt-8">
+                Every threshold has been considered. Every proportion deliberated
+                upon. The result is a collection of residences that do not demand
+                attention but rather reward it &mdash; homes that reveal their
+                beauty slowly, across seasons and years, like a poem read many
+                times over.
+              </p>
             </div>
 
-            {/* Text */}
+            {/* Right column - Pull quote */}
             <div className="lg:col-span-5 flex flex-col justify-center">
-              <blockquote className="font-[family-name:var(--font-cormorant)] text-[clamp(1.8rem,3.5vw,2.8rem)] font-light leading-[1.2] text-text mb-8 italic">
-                &ldquo;We believe a home should be a sanctuary that reveals
-                itself slowly &mdash; in the quality of light, the warmth of
-                materials, the silence of considered space.&rdquo;
-              </blockquote>
-
-              <div className="w-16 h-px bg-bronze mb-8" />
-
-              <p className="font-[family-name:var(--font-lora)] text-[15px] leading-[1.85] text-text/70 mb-6">
-                Maison Lumi&egrave;re is born from a singular conviction: that
-                the spaces we inhabit shape who we become. Every threshold,
-                every surface, every play of shadow and light has been composed
-                with the deliberation of a still life painting.
-              </p>
-              <p className="font-[family-name:var(--font-lora)] text-[15px] leading-[1.85] text-text/70">
-                Here, architecture serves life. Rooms breathe with the seasons.
-                Materials age with grace. This is not a building &mdash; it is
-                an invitation to live with intention, surrounded by beauty that
-                asks nothing but your attention.
-              </p>
-
-              <div className="mt-12">
-                <p className="font-[family-name:var(--font-cormorant)] text-lg italic text-bronze">
-                  Atelier Lumi&egrave;re
-                </p>
-                <p className="font-[family-name:var(--font-montserrat)] text-[10px] tracking-[0.3em] text-taupe uppercase mt-1">
-                  Design Studio, Paris
-                </p>
+              <div className="border-l-2 border-[#8B6F47]/40 pl-8 lg:pl-10">
+                <blockquote className="font-[family-name:var(--font-cormorant)] text-[clamp(1.6rem,3vw,2.4rem)] font-light leading-[1.35] text-[#1A1A1A] italic">
+                  &ldquo;A home should be a sanctuary that reveals itself slowly
+                  &mdash; in the quality of light, the warmth of materials, the
+                  silence of considered space.&rdquo;
+                </blockquote>
+                <div className="mt-8">
+                  <p className="font-[family-name:var(--font-cormorant)] text-lg italic text-[#8B6F47]">
+                    Atelier Lumi&egrave;re
+                  </p>
+                  <p className="font-[family-name:var(--font-montserrat)] text-[10px] tracking-[0.3em] text-[#A39B8B] uppercase mt-1">
+                    Design Studio, Paris &amp; Jakarta
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Thin divider */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="h-px bg-[#D4C5B0]/60" />
+      </div>
+
       {/* ================================================================
-          RESIDENCES - Three Alternating Blocks
+          THE RESIDENCES - Editorial showcase
           ================================================================ */}
-      <section id="residences" className="py-20 lg:py-28 bg-white">
+      <section id="residences" className="py-20 lg:py-32 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           {/* Section header */}
           <div className="text-center mb-20 lg:mb-28">
-            <span className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.4em] text-taupe uppercase">
+            <span className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.5em] text-[#8B6F47] uppercase">
               The Residences
             </span>
-            <h2 className="font-[family-name:var(--font-cormorant)] text-[clamp(2.2rem,5vw,4rem)] font-light leading-[1.1] text-text mt-6">
-              Three Ways to
+            <h2 className="font-[family-name:var(--font-cormorant)] text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-[1.05] text-[#1A1A1A] mt-6">
+              Three Expressions of
               <br />
-              <span className="italic">Call It Home</span>
+              <span className="italic">Refined Living</span>
             </h2>
-            <div className="w-12 h-px bg-bronze mx-auto mt-8" />
+            <div className="w-20 h-px bg-[#8B6F47] mx-auto mt-10" />
           </div>
 
-          {/* Residence 01 — La Terrasse (image right) */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-5 lg:order-1">
-              <span className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.4em] text-taupe uppercase">
-                Residence 01
+          {/* Residence 01 - La Terrasse (large image left, text right) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+            <div className="lg:col-span-7">
+              <div className="relative overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80"
+                  alt="Sunlit luxury living room with floor-to-ceiling windows and natural materials"
+                  className="w-full aspect-[4/5] lg:aspect-[3/4] object-cover hover:scale-[1.02] transition-transform duration-700"
+                />
+                {/* Editorial caption overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/50 to-transparent">
+                  <span className="font-[family-name:var(--font-montserrat)] text-[9px] font-light tracking-[0.4em] text-white/70 uppercase">
+                    Residence 01 of 03
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="lg:col-span-5 flex flex-col justify-center lg:py-12">
+              <span className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.4em] text-[#A39B8B] uppercase">
+                Penthouse Collection
               </span>
-              <h3 className="font-[family-name:var(--font-cormorant)] text-[clamp(2rem,4vw,3.5rem)] font-light leading-[1.1] text-text mt-4 mb-2">
+              <h3 className="font-[family-name:var(--font-cormorant)] text-[clamp(2.2rem,4vw,3.8rem)] font-light leading-[1.05] text-[#1A1A1A] mt-3 mb-2">
                 La Terrasse
               </h3>
-              <p className="font-[family-name:var(--font-cormorant)] text-xl italic text-bronze mb-6">
-                Where mornings begin with jasmine and birdsong
+              <p className="font-[family-name:var(--font-cormorant)] text-xl italic text-[#8B6F47] mb-8">
+                Where mornings begin with jasmine and open sky
               </p>
-              <div className="w-10 h-px bg-bronze mb-6" />
-              <p className="font-[family-name:var(--font-montserrat)] text-[11px] font-light tracking-[0.2em] text-taupe uppercase mb-6">
-                280 m&sup2; &middot; 4 Bedrooms &middot; Private Terrace Garden
+              <div className="w-12 h-px bg-[#8B6F47] mb-8" />
+              <p className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.25em] text-[#A39B8B] uppercase mb-6">
+                280 m&sup2; &middot; 4 Bedrooms &middot; Private Rooftop Garden
               </p>
-              <p className="font-[family-name:var(--font-lora)] text-[15px] leading-[1.85] text-text/70">
-                The crown of Maison Lumi&egrave;re. La Terrasse unfolds across
-                the uppermost floors, where a private rooftop garden extends the
-                living space into open sky. Floor-to-ceiling glazing frames the
-                city&rsquo;s distant silhouette while French oak floors ground
-                each room in warmth. The kitchen, clad in honed Calacatta
-                marble, opens to a dining terrace designed for long evenings
-                under stars.
+              <p className="font-[family-name:var(--font-lora)] text-[15px] leading-[1.9] text-[#2C2C2C]/70">
+                The crown of Maison Lumi&egrave;re. La Terrasse occupies the
+                uppermost floors, where a private rooftop garden extends the living
+                space into open sky. Floor-to-ceiling glazing frames the city&rsquo;s
+                distant silhouette while French oak floors ground each room in warmth.
+                The kitchen, clad in honed Calacatta marble, opens to a dining
+                terrace designed for long evenings beneath the stars.
               </p>
-              <div className="mt-8">
+              <div className="mt-10">
                 <a
                   href="#contact"
-                  className="font-[family-name:var(--font-montserrat)] text-[11px] font-light tracking-[0.25em] text-bronze uppercase border-b border-bronze/40 pb-1 hover:border-bronze transition-colors duration-300"
+                  className="inline-block font-[family-name:var(--font-montserrat)] text-[11px] font-light tracking-[0.3em] text-[#8B6F47] uppercase border-b border-[#8B6F47]/40 pb-1.5 hover:border-[#8B6F47] transition-colors duration-500"
                 >
-                  Inquire
+                  Arrange a Viewing
                 </a>
               </div>
             </div>
-            <div className="lg:col-span-7 lg:order-2 relative aspect-[4/3] overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=80"
-                alt="Luxury penthouse with terrace garden and city views"
-                className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700"
-              />
-            </div>
           </div>
 
-          {/* Residence 02 — Le Jardin (image left) */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mt-20 lg:mt-32">
-            <div className="lg:col-span-7 lg:order-1 relative aspect-[4/3] overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&q=80"
-                alt="Elegant living room with garden access and natural light"
-                className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700"
-              />
-            </div>
-            <div className="lg:col-span-5 lg:order-2">
-              <span className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.4em] text-taupe uppercase">
-                Residence 02
+          {/* Residence 02 - Le Jardin (text left, large image right) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start mt-24 lg:mt-36">
+            <div className="lg:col-span-5 flex flex-col justify-center lg:py-12 lg:order-1">
+              <span className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.4em] text-[#A39B8B] uppercase">
+                Garden Residences
               </span>
-              <h3 className="font-[family-name:var(--font-cormorant)] text-[clamp(2rem,4vw,3.5rem)] font-light leading-[1.1] text-text mt-4 mb-2">
+              <h3 className="font-[family-name:var(--font-cormorant)] text-[clamp(2.2rem,4vw,3.8rem)] font-light leading-[1.05] text-[#1A1A1A] mt-3 mb-2">
                 Le Jardin
               </h3>
-              <p className="font-[family-name:var(--font-cormorant)] text-xl italic text-bronze mb-6">
+              <p className="font-[family-name:var(--font-cormorant)] text-xl italic text-[#8B6F47] mb-8">
                 A sanctuary of green in the heart of the city
               </p>
-              <div className="w-10 h-px bg-bronze mb-6" />
-              <p className="font-[family-name:var(--font-montserrat)] text-[11px] font-light tracking-[0.2em] text-taupe uppercase mb-6">
-                180 m&sup2; &middot; 3 Bedrooms &middot; Garden Access
+              <div className="w-12 h-px bg-[#8B6F47] mb-8" />
+              <p className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.25em] text-[#A39B8B] uppercase mb-6">
+                180 m&sup2; &middot; 3 Bedrooms &middot; Courtyard Access
               </p>
-              <p className="font-[family-name:var(--font-lora)] text-[15px] leading-[1.85] text-text/70">
-                Le Jardin residences occupy the heart of the building, each with
-                direct access to the interior courtyard garden &mdash; a lush,
-                curated landscape inspired by the Jardins de Bagatelle. Living
-                spaces flow seamlessly between indoors and out, with oversized
-                pivoting doors that dissolve the boundary. Natural stone, linen
-                curtains, and muted earth tones create rooms that feel at once
+              <p className="font-[family-name:var(--font-lora)] text-[15px] leading-[1.9] text-[#2C2C2C]/70">
+                Le Jardin residences occupy the building&rsquo;s heart, each with
+                direct access to the interior courtyard &mdash; a curated landscape
+                inspired by the Jardins de Bagatelle. Living spaces flow between
+                indoors and out through oversized pivoting doors. Natural stone, linen
+                curtains, and muted earth tones compose rooms that feel at once
                 sophisticated and deeply comfortable.
               </p>
-              <div className="mt-8">
+              <div className="mt-10">
                 <a
                   href="#contact"
-                  className="font-[family-name:var(--font-montserrat)] text-[11px] font-light tracking-[0.25em] text-bronze uppercase border-b border-bronze/40 pb-1 hover:border-bronze transition-colors duration-300"
+                  className="inline-block font-[family-name:var(--font-montserrat)] text-[11px] font-light tracking-[0.3em] text-[#8B6F47] uppercase border-b border-[#8B6F47]/40 pb-1.5 hover:border-[#8B6F47] transition-colors duration-500"
                 >
-                  Inquire
+                  Arrange a Viewing
                 </a>
+              </div>
+            </div>
+            <div className="lg:col-span-7 lg:order-2">
+              <div className="relative overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80"
+                  alt="Elegant living room with garden access and abundant natural light"
+                  className="w-full aspect-[4/5] lg:aspect-[3/4] object-cover hover:scale-[1.02] transition-transform duration-700"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/50 to-transparent">
+                  <span className="font-[family-name:var(--font-montserrat)] text-[9px] font-light tracking-[0.4em] text-white/70 uppercase">
+                    Residence 02 of 03
+                  </span>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Residence 03 — L'Atelier (image right) */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mt-20 lg:mt-32">
-            <div className="lg:col-span-5 lg:order-1">
-              <span className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.4em] text-taupe uppercase">
-                Residence 03
-              </span>
-              <h3 className="font-[family-name:var(--font-cormorant)] text-[clamp(2rem,4vw,3.5rem)] font-light leading-[1.1] text-text mt-4 mb-2">
-                L&rsquo;Atelier
-              </h3>
-              <p className="font-[family-name:var(--font-cormorant)] text-xl italic text-bronze mb-6">
-                For the creative spirit who values light and space
-              </p>
-              <div className="w-10 h-px bg-bronze mb-6" />
-              <p className="font-[family-name:var(--font-montserrat)] text-[11px] font-light tracking-[0.2em] text-taupe uppercase mb-6">
-                95 m&sup2; &middot; 1&ndash;2 Bedrooms &middot; Double-Height
-                Studio
-              </p>
-              <p className="font-[family-name:var(--font-lora)] text-[15px] leading-[1.85] text-text/70">
-                Conceived for artists, thinkers, and those who crave luminous
-                solitude. L&rsquo;Atelier features a dramatic double-height
-                living space flooded with north light, a mezzanine study, and a
-                material palette of exposed concrete, blackened steel, and warm
-                timber. Every detail has been distilled to its essence &mdash; a
-                residence that is both gallery and refuge.
-              </p>
-              <div className="mt-8">
-                <a
-                  href="#contact"
-                  className="font-[family-name:var(--font-montserrat)] text-[11px] font-light tracking-[0.25em] text-bronze uppercase border-b border-bronze/40 pb-1 hover:border-bronze transition-colors duration-300"
-                >
-                  Inquire
-                </a>
-              </div>
-            </div>
-            <div className="lg:col-span-7 lg:order-2 relative aspect-[4/3] overflow-hidden">
+          {/* Residence 03 - L'Atelier (full-width editorial) */}
+          <div className="mt-24 lg:mt-36">
+            <div className="relative overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
-                alt="Modern loft-style apartment with double-height studio space"
-                className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700"
+                src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1600&q=80"
+                alt="Contemporary architectural residence with dramatic double-height spaces"
+                className="w-full aspect-[16/9] lg:aspect-[21/9] object-cover hover:scale-[1.01] transition-transform duration-700"
               />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ================================================================
-          LIFESTYLE & AMENITIES
-          ================================================================ */}
-      <section id="lifestyle" className="bg-cream">
-        {/* Full-width atmospheric image */}
-        <div className="relative h-[60vh] md:h-[70vh] overflow-hidden">
-          <img
-            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
-            alt="Fine dining terrace at sunset with warm golden light"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF7F2] via-transparent to-transparent" />
-
-          {/* Overlaid text */}
-          <div className="absolute bottom-16 left-0 right-0 text-center px-6">
-            <span className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.4em] text-white/80 uppercase">
-              Lifestyle & Amenities
-            </span>
-            <h2 className="font-[family-name:var(--font-cormorant)] text-[clamp(2.2rem,5vw,4rem)] font-light leading-[1.1] text-white mt-4">
-              The Rituals of
-              <br />
-              <span className="italic">Beautiful Living</span>
-            </h2>
-          </div>
-        </div>
-
-        {/* 2x2 Amenities Grid */}
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-            {/* The Orangerie */}
-            <div className="group">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-                <img
-                  src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
-                  alt="Elegant restaurant interior with warm lighting and fine dining setup"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-              </div>
-              <div className="mt-6">
-                <div className="flex items-center gap-4 mb-3">
-                  <h3 className="font-[family-name:var(--font-cormorant)] text-2xl lg:text-3xl font-light text-text">
-                    The Orangerie
-                  </h3>
-                  <div className="flex-1 h-px bg-divider" />
-                </div>
-                <p className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.3em] text-bronze uppercase mb-3">
-                  Farm-to-table dining
-                </p>
-                <p className="font-[family-name:var(--font-lora)] text-[14px] leading-[1.8] text-text/60">
-                  A glass-walled dining pavilion where seasonal menus celebrate
-                  Indonesia&rsquo;s extraordinary produce, prepared by a
-                  rotating roster of guest chefs.
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-14">
+                <span className="font-[family-name:var(--font-montserrat)] text-[9px] font-light tracking-[0.4em] text-white/70 uppercase">
+                  Residence 03 of 03
+                </span>
+                <h3 className="font-[family-name:var(--font-cormorant)] text-[clamp(2.2rem,5vw,4rem)] font-light leading-[1.05] text-white mt-3">
+                  L&rsquo;Atelier
+                </h3>
+                <p className="font-[family-name:var(--font-cormorant)] text-lg lg:text-xl italic text-white/80 mt-2">
+                  For the creative spirit who values light and space
                 </p>
               </div>
             </div>
-
-            {/* The Library */}
-            <div className="group">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-                <img
-                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
-                  alt="Luxurious private library with floor-to-ceiling bookshelves"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-              </div>
-              <div className="mt-6">
-                <div className="flex items-center gap-4 mb-3">
-                  <h3 className="font-[family-name:var(--font-cormorant)] text-2xl lg:text-3xl font-light text-text">
-                    The Library
-                  </h3>
-                  <div className="flex-1 h-px bg-divider" />
-                </div>
-                <p className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.3em] text-bronze uppercase mb-3">
-                  Art & literature
-                </p>
-                <p className="font-[family-name:var(--font-lora)] text-[14px] leading-[1.8] text-text/60">
-                  A curated collection of first editions, design monographs, and
-                  contemporary art. Armchairs upholstered in Belgian linen.
-                  Silence, encouraged.
+            {/* Text below the full-width image */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-10">
+              <div className="lg:col-span-4">
+                <p className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.25em] text-[#A39B8B] uppercase">
+                  95 m&sup2; &middot; 1&ndash;2 Bedrooms &middot; Double-Height Studio
                 </p>
               </div>
-            </div>
-
-            {/* The Jardin Spa */}
-            <div className="group">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-                <img
-                  src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80"
-                  alt="Serene spa setting with botanical elements and natural materials"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-              </div>
-              <div className="mt-6">
-                <div className="flex items-center gap-4 mb-3">
-                  <h3 className="font-[family-name:var(--font-cormorant)] text-2xl lg:text-3xl font-light text-text">
-                    The Jardin Spa
-                  </h3>
-                  <div className="flex-1 h-px bg-divider" />
-                </div>
-                <p className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.3em] text-bronze uppercase mb-3">
-                  Botanical treatments
-                </p>
-                <p className="font-[family-name:var(--font-lora)] text-[14px] leading-[1.8] text-text/60">
-                  Drawing on Javanese jamu traditions and French botanical
-                  science, our spa offers rituals designed to restore both body
-                  and spirit amidst living greenery.
+              <div className="lg:col-span-5">
+                <p className="font-[family-name:var(--font-lora)] text-[15px] leading-[1.9] text-[#2C2C2C]/70">
+                  Conceived for artists, thinkers, and those who crave luminous
+                  solitude. L&rsquo;Atelier features a dramatic double-height living
+                  space flooded with north light, a mezzanine study, and a material
+                  palette of exposed concrete, blackened steel, and warm timber. Every
+                  detail distilled to its essence &mdash; a residence that is both
+                  gallery and refuge.
                 </p>
               </div>
-            </div>
-
-            {/* The Salon */}
-            <div className="group">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-                <img
-                  src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80"
-                  alt="Sophisticated private event space with elegant lighting"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-              </div>
-              <div className="mt-6">
-                <div className="flex items-center gap-4 mb-3">
-                  <h3 className="font-[family-name:var(--font-cormorant)] text-2xl lg:text-3xl font-light text-text">
-                    The Salon
-                  </h3>
-                  <div className="flex-1 h-px bg-divider" />
-                </div>
-                <p className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.3em] text-bronze uppercase mb-3">
-                  Private events
-                </p>
-                <p className="font-[family-name:var(--font-lora)] text-[14px] leading-[1.8] text-text/60">
-                  An intimate gathering space for private dinners, art previews,
-                  and cultural salons. Styled in deep greens and burnished
-                  bronze, seating up to forty guests.
-                </p>
+              <div className="lg:col-span-3 flex lg:justify-end lg:items-start">
+                <a
+                  href="#contact"
+                  className="inline-block font-[family-name:var(--font-montserrat)] text-[11px] font-light tracking-[0.3em] text-[#8B6F47] uppercase border-b border-[#8B6F47]/40 pb-1.5 hover:border-[#8B6F47] transition-colors duration-500"
+                >
+                  Arrange a Viewing
+                </a>
               </div>
             </div>
           </div>
@@ -441,136 +320,183 @@ export default function Home() {
       </section>
 
       {/* ================================================================
-          NEIGHBORHOOD
+          DESIGN PHILOSOPHY - Craftsmanship, Materials, Light
           ================================================================ */}
-      <section className="relative h-[80vh] md:h-[90vh] overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80"
-            alt="Tree-lined boulevard with European-style cafes and dappled sunlight"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/30" />
-        </div>
-
-        <div className="absolute inset-0 flex items-center justify-center px-6">
-          <div className="bg-[#FAF7F2]/90 backdrop-blur-sm px-10 py-14 md:px-16 md:py-20 max-w-3xl text-center">
-            <span className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.4em] text-taupe uppercase">
-              The Neighborhood
-            </span>
-
-            <h2 className="font-[family-name:var(--font-cormorant)] text-[clamp(1.8rem,4vw,3rem)] font-light leading-[1.2] text-text mt-6 mb-6">
-              Nestled in <span className="italic">Menteng</span>,
-              <br />
-              Jakarta&apos;s Most Coveted Address
-            </h2>
-
-            <div className="w-12 h-px bg-bronze mx-auto mb-6" />
-
-            <p className="font-[family-name:var(--font-lora)] text-[15px] leading-[1.85] text-text/70 max-w-lg mx-auto mb-6">
-              Menteng&apos;s tree-canopied boulevards and Art Deco heritage have
-              long drawn Jakarta&apos;s cultural and diplomatic elite. Here,
-              morning walks lead past colonial-era mansions, independent
-              bookshops, and caf&eacute;s where conversations linger past noon.
-            </p>
-
-            <p className="font-[family-name:var(--font-lora)] text-[15px] leading-[1.85] text-text/70 max-w-lg mx-auto">
-              Within minutes: the National Gallery, Taman Suropati, and the
-              finest restaurants the city has to offer. This is a neighborhood
-              that rewards the unhurried life.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ================================================================
-          MATERIALS - Horizontal Scroll
-          ================================================================ */}
-      <section id="materials" className="py-20 lg:py-28 bg-white overflow-hidden">
+      <section id="philosophy" className="py-20 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="mb-12 lg:mb-16">
-            <span className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.4em] text-taupe uppercase">
-              Material Palette
+          {/* Section header */}
+          <div className="text-center mb-20 lg:mb-28">
+            <span className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.5em] text-[#8B6F47] uppercase">
+              Design Philosophy
             </span>
-            <h2 className="font-[family-name:var(--font-cormorant)] text-[clamp(2rem,4vw,3.5rem)] font-light leading-[1.1] text-text mt-4">
-              Chosen for <span className="italic">Character</span>
+            <h2 className="font-[family-name:var(--font-cormorant)] text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-[1.05] text-[#1A1A1A] mt-6">
+              The Measure of
+              <br />
+              <span className="italic">Beautiful Things</span>
             </h2>
-            <p className="font-[family-name:var(--font-lora)] text-[15px] leading-[1.8] text-text/60 mt-4 max-w-xl">
-              Every material in Maison Lumi&egrave;re has been selected not
-              merely for beauty, but for the way it will age, weather, and tell
-              a story over decades.
-            </p>
+            <div className="w-20 h-px bg-[#8B6F47] mx-auto mt-10" />
+          </div>
+
+          {/* Three pillars */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+            {/* Craftsmanship */}
+            <div className="text-center group">
+              <div className="relative overflow-hidden aspect-[3/4] mb-8">
+                <img
+                  src="https://images.unsplash.com/photo-1618220179428-22790b461013?w=800&q=80"
+                  alt="Artisan hands working with natural marble and stone materials"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                />
+              </div>
+              <div className="w-8 h-px bg-[#8B6F47] mx-auto mb-6" />
+              <h3 className="font-[family-name:var(--font-cormorant)] text-[clamp(1.5rem,2.5vw,2rem)] font-light text-[#1A1A1A] italic mb-4">
+                Craftsmanship
+              </h3>
+              <p className="font-[family-name:var(--font-lora)] text-[14px] leading-[1.9] text-[#2C2C2C]/65 max-w-sm mx-auto">
+                Every joint, every edge, every surface has been shaped by hands that
+                understand materials intimately. We collaborate with artisans from
+                Tuscany to Kyoto, each bringing generations of knowledge to a single
+                detail.
+              </p>
+            </div>
+
+            {/* Materials */}
+            <div className="text-center group">
+              <div className="relative overflow-hidden aspect-[3/4] mb-8">
+                <img
+                  src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80"
+                  alt="Luxurious natural linen and timber materials in warm tones"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                />
+              </div>
+              <div className="w-8 h-px bg-[#8B6F47] mx-auto mb-6" />
+              <h3 className="font-[family-name:var(--font-cormorant)] text-[clamp(1.5rem,2.5vw,2rem)] font-light text-[#1A1A1A] italic mb-4">
+                Materials
+              </h3>
+              <p className="font-[family-name:var(--font-lora)] text-[14px] leading-[1.9] text-[#2C2C2C]/65 max-w-sm mx-auto">
+                Selected not merely for beauty, but for character. Calacatta marble
+                from Carrara. French oak from Burgundy. Belgian linen from Courtrai.
+                Materials that age with grace and tell a story over decades.
+              </p>
+            </div>
+
+            {/* Light */}
+            <div className="text-center group">
+              <div className="relative overflow-hidden aspect-[3/4] mb-8">
+                <img
+                  src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80"
+                  alt="Architectural interior bathed in soft natural light through tall windows"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                />
+              </div>
+              <div className="w-8 h-px bg-[#8B6F47] mx-auto mb-6" />
+              <h3 className="font-[family-name:var(--font-cormorant)] text-[clamp(1.5rem,2.5vw,2rem)] font-light text-[#1A1A1A] italic mb-4">
+                Light
+              </h3>
+              <p className="font-[family-name:var(--font-lora)] text-[14px] leading-[1.9] text-[#2C2C2C]/65 max-w-sm mx-auto">
+                Architecture is, at its essence, the choreography of light. Each
+                residence has been oriented and composed so that sunlight moves
+                through the rooms like music &mdash; changing the atmosphere from
+                hour to hour, season to season.
+              </p>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Horizontal scroll container */}
-        <div className="materials-scroll overflow-x-auto">
-          <div
-            className="flex gap-6 px-6 md:px-12 lg:px-20 pb-4"
-            style={{ minWidth: "max-content" }}
-          >
+      {/* Thin divider */}
+      <div className="bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="h-px bg-[#D4C5B0]/60" />
+        </div>
+      </div>
+
+      {/* ================================================================
+          AMENITIES - Elegant minimal cards
+          ================================================================ */}
+      <section id="amenities" className="py-20 lg:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          {/* Section header */}
+          <div className="mb-20 lg:mb-24">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+              <div className="lg:col-span-6">
+                <span className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.5em] text-[#8B6F47] uppercase">
+                  Amenities
+                </span>
+                <h2 className="font-[family-name:var(--font-cormorant)] text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-[1.05] text-[#1A1A1A] mt-6">
+                  The Rituals of
+                  <br />
+                  <span className="italic">Beautiful Living</span>
+                </h2>
+              </div>
+              <div className="lg:col-span-5 lg:col-start-8">
+                <p className="font-[family-name:var(--font-lora)] text-[15px] leading-[1.9] text-[#2C2C2C]/70">
+                  Beyond the private residence, Maison Lumi&egrave;re offers a
+                  constellation of shared spaces &mdash; each conceived as a
+                  destination in itself, each an extension of the life we believe
+                  you deserve.
+                </p>
+              </div>
+            </div>
+            <div className="w-full h-px bg-[#D4C5B0]/60 mt-12" />
+          </div>
+
+          {/* Amenities grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 lg:gap-x-20 lg:gap-y-20">
             {[
               {
-                name: "Italian Marble",
-                origin: "Carrara, Tuscany",
-                image:
-                  "https://images.unsplash.com/photo-1618220179428-22790b461013?w=600&q=80",
-                imageAlt:
-                  "Italian Calacatta marble texture with subtle gold veining",
+                name: "The Orangerie",
+                category: "Farm-to-table dining",
+                description:
+                  "A glass-walled dining pavilion where seasonal menus celebrate Indonesia\u2019s extraordinary produce, prepared by a rotating roster of guest chefs from around the world.",
               },
               {
-                name: "French Oak",
-                origin: "Burgundy, France",
-                image:
-                  "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
-                imageAlt:
-                  "French oak herringbone parquet floor in warm honey tones",
+                name: "The Library",
+                category: "Art & literature",
+                description:
+                  "A curated collection of first editions, design monographs, and contemporary art. Armchairs upholstered in Belgian linen. Silence, encouraged.",
               },
               {
-                name: "Bronze Fixtures",
-                origin: "Atelier Forge, Lyon",
-                image:
-                  "https://images.unsplash.com/photo-1558618047-f4811f1e9a7d?w=600&q=80",
-                imageAlt:
-                  "Burnished bronze hardware and fixtures with patina detail",
+                name: "The Jardin Spa",
+                category: "Botanical treatments",
+                description:
+                  "Drawing on Javanese jamu traditions and French botanical science, our spa offers rituals designed to restore both body and spirit amidst living greenery.",
               },
               {
-                name: "Washi Paper",
-                origin: "Echizen, Japan",
-                image:
-                  "https://images.unsplash.com/photo-1533628635777-112b2239b1c7?w=600&q=80",
-                imageAlt:
-                  "Handmade Japanese washi paper with delicate natural fiber texture",
+                name: "The Salon",
+                category: "Private events",
+                description:
+                  "An intimate gathering space for private dinners, art previews, and cultural salons. Styled in deep greens and burnished bronze, seating up to forty guests.",
               },
               {
-                name: "Belgian Linen",
-                origin: "Courtrai, Belgium",
-                image:
-                  "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80",
-                imageAlt:
-                  "Belgian linen fabric draped in soft natural folds",
+                name: "The Courtyard",
+                category: "Contemplative garden",
+                description:
+                  "A walled garden at the building\u2019s heart, landscaped with tropical ferns, water features, and seating alcoves \u2014 the kind of urban oasis that makes a city feel like countryside.",
               },
-            ].map((material) => (
-              <div
-                key={material.name}
-                className="group flex-shrink-0 w-[280px] md:w-[320px]"
-              >
-                <div className="relative aspect-[3/4] overflow-hidden">
-                  <img
-                    src={material.image}
-                    alt={material.imageAlt}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/30 to-transparent" />
+              {
+                name: "The Cellar",
+                category: "Wine & conversation",
+                description:
+                  "A temperature-controlled wine room and tasting lounge, hosting monthly tastings and pairing evenings. The collection spans Old World estates and Indonesian vineyards.",
+              },
+            ].map((amenity, index) => (
+              <div key={amenity.name} className="group">
+                <div className="flex items-baseline gap-4 mb-4">
+                  <span className="font-[family-name:var(--font-cormorant)] text-[2.5rem] font-light text-[#D4C5B0]/80 leading-none">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <div className="flex-1 h-px bg-[#D4C5B0]/40 translate-y-[-4px]" />
                 </div>
-                <div className="mt-5">
-                  <h3 className="font-[family-name:var(--font-montserrat)] text-[11px] font-medium tracking-[0.25em] text-text uppercase">
-                    {material.name}
-                  </h3>
-                  <p className="font-[family-name:var(--font-cormorant)] text-base italic text-taupe mt-1">
-                    {material.origin}
-                  </p>
-                </div>
+                <h3 className="font-[family-name:var(--font-cormorant)] text-[clamp(1.5rem,2.5vw,2rem)] font-light text-[#1A1A1A] mb-1">
+                  {amenity.name}
+                </h3>
+                <p className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.3em] text-[#8B6F47] uppercase mb-4">
+                  {amenity.category}
+                </p>
+                <p className="font-[family-name:var(--font-lora)] text-[14px] leading-[1.85] text-[#2C2C2C]/60">
+                  {amenity.description}
+                </p>
               </div>
             ))}
           </div>
@@ -578,23 +504,32 @@ export default function Home() {
       </section>
 
       {/* ================================================================
-          TESTIMONIAL / QUOTE
+          EDITORIAL QUOTE - Full-width interlude
           ================================================================ */}
-      <section className="py-28 md:py-36 lg:py-44 bg-cream">
-        <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
-          <div className="w-16 h-px bg-bronze mx-auto mb-12" />
+      <section className="relative py-28 md:py-36 lg:py-44 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80"
+            alt="Minimalist luxury interior with warm golden light"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
 
+        <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-12 text-center">
+          <div className="w-16 h-px bg-[#8B6F47] mx-auto mb-12" />
           <blockquote>
-            <p className="font-[family-name:var(--font-cormorant)] text-[clamp(1.6rem,4vw,3rem)] font-light leading-[1.3] text-text italic">
-              &ldquo;Maison Lumi&egrave;re is not a residence.
+            <p className="font-[family-name:var(--font-cormorant)] text-[clamp(1.8rem,4.5vw,3.5rem)] font-light leading-[1.25] text-white italic">
+              &ldquo;Maison Lumi&egrave;re is not a place
               <br className="hidden md:block" />
-              It is a way of life.&rdquo;
+              you arrive at. It is a way
+              <br className="hidden md:block" />
+              of life you step into.&rdquo;
             </p>
           </blockquote>
-
           <div className="mt-10">
-            <div className="w-8 h-px bg-divider mx-auto mb-6" />
-            <p className="font-[family-name:var(--font-montserrat)] text-[11px] font-light tracking-[0.3em] text-taupe uppercase">
+            <div className="w-8 h-px bg-white/30 mx-auto mb-5" />
+            <p className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.35em] text-white/60 uppercase">
               Architectural Digest Indonesia
             </p>
           </div>
@@ -602,125 +537,256 @@ export default function Home() {
       </section>
 
       {/* ================================================================
-          PRIVATE VIEWING - Contact Form
+          GALLERY - Editorial asymmetric grid
           ================================================================ */}
-      <section id="contact" className="bg-white">
-        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[80vh]">
-          {/* Left - Atmospheric image */}
-          <div className="relative aspect-[4/3] lg:aspect-auto overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80"
-              alt="Atmospheric candlelit interior with warm ambient lighting"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/20" />
+      <section id="gallery" className="py-20 lg:py-32 bg-[#FAF7F2]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          {/* Section header */}
+          <div className="text-center mb-16 lg:mb-24">
+            <span className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.5em] text-[#8B6F47] uppercase">
+              Gallery
+            </span>
+            <h2 className="font-[family-name:var(--font-cormorant)] text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-[1.05] text-[#1A1A1A] mt-6">
+              A Visual <span className="italic">Journal</span>
+            </h2>
+            <div className="w-20 h-px bg-[#8B6F47] mx-auto mt-10" />
+          </div>
 
-            <div className="absolute bottom-10 left-10 right-10">
-              <p className="font-[family-name:var(--font-cormorant)] text-[clamp(1.5rem,3vw,2.5rem)] font-light leading-[1.2] text-white italic">
-                Experience Maison Lumi&egrave;re
-                <br />
-                in person
-              </p>
+          {/* Row 1: 7/5 split */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-5">
+            <div className="lg:col-span-7 relative overflow-hidden group">
+              <img
+                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80"
+                alt="Maison Lumiere grand facade with landscaped entrance"
+                className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <p className="font-[family-name:var(--font-montserrat)] text-[9px] font-light tracking-[0.3em] text-white/80 uppercase">
+                  The Arrival
+                </p>
+              </div>
+            </div>
+            <div className="lg:col-span-5 relative overflow-hidden group">
+              <img
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
+                alt="Interior living space with warm natural light"
+                className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <p className="font-[family-name:var(--font-montserrat)] text-[9px] font-light tracking-[0.3em] text-white/80 uppercase">
+                  Living Spaces
+                </p>
+              </div>
             </div>
           </div>
 
-          {/* Right - Form */}
-          <div className="flex items-center justify-center px-8 py-16 md:px-16 lg:px-20">
-            <div className="w-full max-w-md">
-              <span className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.4em] text-taupe uppercase">
-                Private Viewing
-              </span>
-              <h2 className="font-[family-name:var(--font-cormorant)] text-[clamp(2rem,3.5vw,3rem)] font-light leading-[1.1] text-text mt-4 mb-3">
-                Arrange a <span className="italic">Visit</span>
-              </h2>
-              <p className="font-[family-name:var(--font-lora)] text-[14px] leading-[1.8] text-text/60 mb-10">
-                We invite you to experience our residences, materials, and
-                shared spaces firsthand. Each viewing is private and entirely at
-                your pace.
-              </p>
+          {/* Row 2: 4/4/4 equal */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 mt-4 lg:mt-5">
+            <div className="relative overflow-hidden group">
+              <img
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80"
+                alt="Modern residence exterior with clean architectural lines"
+                className="w-full aspect-square object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <p className="font-[family-name:var(--font-montserrat)] text-[9px] font-light tracking-[0.3em] text-white/80 uppercase">
+                  Architecture
+                </p>
+              </div>
+            </div>
+            <div className="relative overflow-hidden group">
+              <img
+                src="https://images.unsplash.com/photo-1618220179428-22790b461013?w=600&q=80"
+                alt="Marble and natural material details in the residence"
+                className="w-full aspect-square object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <p className="font-[family-name:var(--font-montserrat)] text-[9px] font-light tracking-[0.3em] text-white/80 uppercase">
+                  Material Detail
+                </p>
+              </div>
+            </div>
+            <div className="relative overflow-hidden group">
+              <img
+                src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80"
+                alt="Curated interior furnishing with linen textiles"
+                className="w-full aspect-square object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <p className="font-[family-name:var(--font-montserrat)] text-[9px] font-light tracking-[0.3em] text-white/80 uppercase">
+                  Textile & Form
+                </p>
+              </div>
+            </div>
+          </div>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.3em] text-taupe uppercase block mb-2"
-                  >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full border-b border-divider bg-transparent py-3 font-[family-name:var(--font-lora)] text-[15px] text-text placeholder-taupe/50 transition-colors duration-300"
-                    placeholder="Your full name"
-                  />
+          {/* Row 3: 5/7 split (reversed) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-5 mt-4 lg:mt-5">
+            <div className="lg:col-span-5 relative overflow-hidden group">
+              <img
+                src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80"
+                alt="Light-filled corridor with architectural shadows"
+                className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <p className="font-[family-name:var(--font-montserrat)] text-[9px] font-light tracking-[0.3em] text-white/80 uppercase">
+                  Light & Shadow
+                </p>
+              </div>
+            </div>
+            <div className="lg:col-span-7 relative overflow-hidden group">
+              <img
+                src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80"
+                alt="Contemporary luxury residence with pool and landscaping"
+                className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <p className="font-[family-name:var(--font-montserrat)] text-[9px] font-light tracking-[0.3em] text-white/80 uppercase">
+                  The Grounds
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================================================================
+          CONTACT / INQUIRY - Private Viewing
+          ================================================================ */}
+      <section id="contact" className="bg-[#FAF7F2]">
+        {/* Thin divider */}
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="h-px bg-[#D4C5B0]/60" />
+        </div>
+
+        <div className="py-20 lg:py-32">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+              {/* Left - Editorial text */}
+              <div className="lg:col-span-5 flex flex-col justify-center">
+                <span className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.5em] text-[#8B6F47] uppercase">
+                  Private Viewing
+                </span>
+                <h2 className="font-[family-name:var(--font-cormorant)] text-[clamp(2.5rem,5vw,4rem)] font-light leading-[1.05] text-[#1A1A1A] mt-6 mb-4">
+                  Experience It
+                  <br />
+                  <span className="italic">In Person</span>
+                </h2>
+                <div className="w-12 h-px bg-[#8B6F47] mb-8" />
+                <p className="font-[family-name:var(--font-lora)] text-[15px] leading-[1.9] text-[#2C2C2C]/70 mb-6">
+                  We believe that a home of this nature must be felt, not merely
+                  seen. The way light falls across the marble at noon. The scent of
+                  the courtyard garden after rain. The particular silence of rooms
+                  built with care.
+                </p>
+                <p className="font-[family-name:var(--font-lora)] text-[15px] leading-[1.9] text-[#2C2C2C]/70">
+                  Each viewing is private, unhurried, and entirely at your pace. We
+                  invite you to discover Maison Lumi&egrave;re on your own terms.
+                </p>
+
+                {/* Contact details */}
+                <div className="mt-12 pt-8 border-t border-[#D4C5B0]/40">
+                  <div className="space-y-3">
+                    <p className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.25em] text-[#A39B8B] uppercase">
+                      Jl. Imam Bonjol No. 12, Menteng
+                    </p>
+                    <p className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.25em] text-[#A39B8B] uppercase">
+                      Jakarta Pusat 10310, Indonesia
+                    </p>
+                    <p className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.25em] text-[#A39B8B] uppercase">
+                      +62 21 3145 8900
+                    </p>
+                  </div>
                 </div>
+              </div>
 
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.3em] text-taupe uppercase block mb-2"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full border-b border-divider bg-transparent py-3 font-[family-name:var(--font-lora)] text-[15px] text-text placeholder-taupe/50 transition-colors duration-300"
-                    placeholder="your@email.com"
-                  />
+              {/* Right - Form */}
+              <div className="lg:col-span-6 lg:col-start-7">
+                <div className="bg-white p-8 md:p-12 lg:p-14">
+                  <form onSubmit={handleSubmit} className="space-y-8">
+                    <div>
+                      <label
+                        htmlFor="name"
+                        className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.3em] text-[#A39B8B] uppercase block mb-3"
+                      >
+                        Name
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        className="w-full border-b border-[#D4C5B0] bg-transparent py-3 font-[family-name:var(--font-lora)] text-[15px] text-[#2C2C2C] placeholder-[#A39B8B]/50 transition-colors duration-300 focus:outline-none focus:border-[#8B6F47]"
+                        placeholder="Your full name"
+                      />
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="email"
+                        className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.3em] text-[#A39B8B] uppercase block mb-3"
+                      >
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        className="w-full border-b border-[#D4C5B0] bg-transparent py-3 font-[family-name:var(--font-lora)] text-[15px] text-[#2C2C2C] placeholder-[#A39B8B]/50 transition-colors duration-300 focus:outline-none focus:border-[#8B6F47]"
+                        placeholder="your@email.com"
+                      />
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="phone"
+                        className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.3em] text-[#A39B8B] uppercase block mb-3"
+                      >
+                        Phone
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="w-full border-b border-[#D4C5B0] bg-transparent py-3 font-[family-name:var(--font-lora)] text-[15px] text-[#2C2C2C] placeholder-[#A39B8B]/50 transition-colors duration-300 focus:outline-none focus:border-[#8B6F47]"
+                        placeholder="+62 xxx xxxx xxxx"
+                      />
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="message"
+                        className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.3em] text-[#A39B8B] uppercase block mb-3"
+                      >
+                        Tell us about your ideal home
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        rows={4}
+                        className="w-full border-b border-[#D4C5B0] bg-transparent py-3 font-[family-name:var(--font-lora)] text-[15px] text-[#2C2C2C] placeholder-[#A39B8B]/50 resize-none transition-colors duration-300 focus:outline-none focus:border-[#8B6F47]"
+                        placeholder="What matters most to you in a home?"
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="mt-4 w-full bg-[#8B6F47] text-[#FAF7F2] py-4 font-[family-name:var(--font-montserrat)] text-[11px] font-light tracking-[0.3em] uppercase hover:bg-[#7A6240] transition-colors duration-500"
+                    >
+                      Arrange a Private Viewing
+                    </button>
+                  </form>
                 </div>
-
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.3em] text-taupe uppercase block mb-2"
-                  >
-                    Phone
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full border-b border-divider bg-transparent py-3 font-[family-name:var(--font-lora)] text-[15px] text-text placeholder-taupe/50 transition-colors duration-300"
-                    placeholder="+62 xxx xxxx xxxx"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.3em] text-taupe uppercase block mb-2"
-                  >
-                    Tell us about your ideal home
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={4}
-                    className="w-full border-b border-divider bg-transparent py-3 font-[family-name:var(--font-lora)] text-[15px] text-text placeholder-taupe/50 resize-none transition-colors duration-300"
-                    placeholder="What matters most to you in a home?"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="mt-4 w-full bg-bronze text-cream py-4 font-[family-name:var(--font-montserrat)] text-[11px] font-light tracking-[0.3em] uppercase hover:bg-bronze/90 transition-colors duration-300"
-                >
-                  Arrange a Private Visit
-                </button>
-              </form>
+              </div>
             </div>
           </div>
         </div>
@@ -729,61 +795,84 @@ export default function Home() {
       {/* ================================================================
           FOOTER
           ================================================================ */}
-      <footer className="py-20 md:py-28 bg-cream">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          {/* Logo text */}
-          <h2 className="font-[family-name:var(--font-cormorant)] text-3xl md:text-4xl font-light text-text tracking-wide">
-            Maison <span className="italic">Lumi&egrave;re</span>
-          </h2>
+      <footer className="py-20 md:py-28 bg-[#1A1A1A]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          {/* Top row */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-16">
+            {/* Logo */}
+            <div className="md:col-span-4">
+              <h2 className="font-[family-name:var(--font-cormorant)] text-3xl md:text-4xl font-light text-white tracking-wide">
+                Maison <span className="italic">Lumi&egrave;re</span>
+              </h2>
+              <p className="font-[family-name:var(--font-cormorant)] text-base italic text-[#8B6F47] mt-3">
+                The Art of Living Well
+              </p>
+            </div>
 
-          {/* Address */}
-          <p className="font-[family-name:var(--font-lora)] text-[14px] text-text/50 mt-6 leading-relaxed">
-            Jl. Imam Bonjol No. 12, Menteng
-            <br />
-            Jakarta Pusat 10310, Indonesia
-          </p>
+            {/* Navigation */}
+            <div className="md:col-span-4 md:text-center">
+              <p className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.3em] text-white/30 uppercase mb-5">
+                Navigate
+              </p>
+              <div className="flex flex-col gap-3">
+                {["Residences", "Philosophy", "Amenities", "Gallery", "Contact"].map(
+                  (item) => (
+                    <a
+                      key={item}
+                      href={`#${item.toLowerCase()}`}
+                      className="font-[family-name:var(--font-montserrat)] text-[11px] font-light tracking-[0.25em] text-white/50 uppercase hover:text-[#8B6F47] transition-colors duration-500"
+                    >
+                      {item}
+                    </a>
+                  )
+                )}
+              </div>
+            </div>
 
-          {/* Phone */}
-          <p className="font-[family-name:var(--font-montserrat)] text-[11px] font-light tracking-[0.25em] text-taupe uppercase mt-4">
-            +62 21 3145 8900
-          </p>
-
-          {/* Bronze divider */}
-          <div className="w-16 h-px bg-bronze mx-auto mt-10 mb-10" />
-
-          {/* Navigation links */}
-          <div className="flex flex-wrap items-center justify-center gap-8 mb-10">
-            {["Residences", "Lifestyle", "Materials", "Contact"].map(
-              (item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.3em] text-taupe uppercase hover:text-bronze transition-colors duration-300"
-                >
-                  {item}
-                </a>
-              )
-            )}
+            {/* Contact */}
+            <div className="md:col-span-4 md:text-right">
+              <p className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.3em] text-white/30 uppercase mb-5">
+                Contact
+              </p>
+              <div className="space-y-2">
+                <p className="font-[family-name:var(--font-lora)] text-[13px] text-white/50">
+                  Jl. Imam Bonjol No. 12, Menteng
+                </p>
+                <p className="font-[family-name:var(--font-lora)] text-[13px] text-white/50">
+                  Jakarta Pusat 10310, Indonesia
+                </p>
+                <p className="font-[family-name:var(--font-lora)] text-[13px] text-white/50 mt-4">
+                  +62 21 3145 8900
+                </p>
+                <p className="font-[family-name:var(--font-lora)] text-[13px] text-white/50">
+                  info@maisonlumiere.id
+                </p>
+              </div>
+            </div>
           </div>
 
-          {/* Copyright */}
-          <p className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.2em] text-taupe/60 uppercase">
-            &copy; 2026 Maison Lumi&egrave;re. All rights reserved.
-          </p>
+          {/* Divider */}
+          <div className="h-px bg-white/10 mb-10" />
 
-          {/* Creativism credit */}
-          <p className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.15em] text-taupe/40 mt-4">
-            Made with{" "}
-            <span className="text-bronze/60">&hearts;</span> by{" "}
-            <a
-              href="https://creativism.id"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-taupe/60 hover:text-bronze transition-colors duration-300 border-b border-taupe/20 hover:border-bronze/40"
-            >
-              Creativism
-            </a>
-          </p>
+          {/* Bottom row */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.2em] text-white/25 uppercase">
+              &copy; 2026 Maison Lumi&egrave;re. All rights reserved.
+            </p>
+
+            <p className="font-[family-name:var(--font-montserrat)] text-[10px] font-light tracking-[0.15em] text-white/25">
+              Made with{" "}
+              <span className="text-[#8B6F47]/70">&hearts;</span> by{" "}
+              <a
+                href="https://creativism.id"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/40 hover:text-[#8B6F47] transition-colors duration-500 border-b border-white/10 hover:border-[#8B6F47]/40"
+              >
+                Creativism
+              </a>
+            </p>
+          </div>
         </div>
       </footer>
     </main>

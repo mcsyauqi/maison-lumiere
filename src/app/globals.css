@@ -46,7 +46,7 @@ body {
 }
 
 /* =============================================
-   CSS-only Animations (replacing framer-motion)
+   CSS-only Animations
    ============================================= */
 
 /* Scroll indicator bounce */
@@ -60,7 +60,7 @@ body {
 }
 
 .scroll-indicator {
-  animation: scrollBounce 2s ease-in-out infinite;
+  animation: scrollBounce 2.5s ease-in-out infinite;
 }
 
 /* Fade down (for nav) */
@@ -105,28 +105,20 @@ body {
   animation: fadeUp 1s ease-out 1.5s both;
 }
 
-/* Horizontal scroll for materials */
-.materials-scroll {
-  scrollbar-width: thin;
-  scrollbar-color: #8B6F47 #FAF7F2;
-}
+/* =============================================
+   Form focus styles
+   ============================================= */
 
-.materials-scroll::-webkit-scrollbar {
-  height: 4px;
-}
-
-.materials-scroll::-webkit-scrollbar-track {
-  background: #FAF7F2;
-}
-
-.materials-scroll::-webkit-scrollbar-thumb {
-  background-color: #8B6F47;
-  border-radius: 2px;
-}
-
-/* Form focus styles */
 input:focus,
 textarea:focus {
   outline: none;
   border-color: #8B6F47;
+}
+
+/* =============================================
+   Editorial image hover overlays
+   ============================================= */
+
+img {
+  display: block;
 }
